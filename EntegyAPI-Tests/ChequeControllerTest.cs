@@ -168,5 +168,16 @@ namespace EntegyAPI_Tests
             Assert.Equal("Sorry the maximum value that can be processed is 999999999999999.99", result.Value);
 
         }
+
+        [Fact]
+        public void Get_DecimalWithZeroDollar()
+        {
+            // Act
+            var okResult = _controller.Get("000.00987");
+            // Assert
+            var result = Assert.IsType<OkObjectResult>(okResult.Result);
+            Assert.Equal("ZERO DOLLAR", result.Value);
+
+        }
     }
 }
