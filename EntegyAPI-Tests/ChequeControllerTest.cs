@@ -18,9 +18,13 @@ namespace EntegyAPI_Tests
         }
 
         [Fact]
-        public void Test1()
+        public void Get_WhenCalled_ReturnsOkResult()
         {
+            // Act
+            var okResult = _controller.Get("2.52");
 
+            // Assert
+            Assert.IsType<OkObjectResult>(okResult.Result);
         }
     }
 }
