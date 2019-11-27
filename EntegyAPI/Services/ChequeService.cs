@@ -14,7 +14,7 @@ namespace EntegyAPI.Services
             string fractional_part = "";
 
             string err_msg = CheckInputAmt(amt, out bool inputAmtAccepted);
-
+            
             if (!inputAmtAccepted)
                 return err_msg;
 

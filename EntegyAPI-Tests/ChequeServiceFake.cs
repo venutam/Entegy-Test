@@ -26,7 +26,7 @@ namespace EntegyAPI_Tests
             {
                 string[] parts = amt.Split('.');
                 integral_part = parts[0];
-                fractional_part = parts[1].Length < 2 ? parts[1] + "0" : parts[1].Substring(0, 2);
+                fractional_part = parts[1].Length < 2 ? parts[1] + "0" : parts[1].Substring(0, 2); //Handling cents value if the input given is 2.5
             }
             else
             {
@@ -40,7 +40,7 @@ namespace EntegyAPI_Tests
 
             string strWords = ConvertToWord(integral_part);
 
-            strWords = strWords == "" ? "" : strWords + (Int64.Parse(integral_part) > 1 ? " DOLLARS" : " DOLLAR");
+            strWords = strWords == "" ? "" : strWords + (Int64.Parse(integral_part) > 1 ? " DOLLARS" : " DOLLAR"); // Checking for dollar amount greater than 1 to add DOLLARS instead of DOLLAR
 
             if (fractional_part.Length > 0)
             {
@@ -96,14 +96,14 @@ namespace EntegyAPI_Tests
 
             while (number.Length > 0)
             {
-                string next_3digits = number.Length < 3 ? number : number.Substring(number.Length - 3);
-                number = number.Length < 3 ? "" : number.Remove(number.Length - 3);
+                string next_3digits = number.Length < 3 ? number : number.Substring(number.Length - 3); //Getting right most 3 digits
+                number = number.Length < 3 ? "" : number.Remove(number.Length - 3); //Removing the right most 3 digits
 
                 int num = int.Parse(next_3digits);
 
                 next_3digits = ConvertToWordLast3Digits(num);
 
-                next_3digits = next_3digits == "" ? "" : next_3digits += units[counter];
+                next_3digits = next_3digits == "" ? "" : next_3digits += units[counter]; //Fetching units
 
                 words = next_3digits + words;
 
