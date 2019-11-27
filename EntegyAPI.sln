@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntegyAPI", "EntegyAPI\EntegyAPI.csproj", "{9C15A36F-3509-4617-BF29-DE4BC55BE146}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C15A36F-3509-4617-BF29-DE4BC55BE146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C15A36F-3509-4617-BF29-DE4BC55BE146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C15A36F-3509-4617-BF29-DE4BC55BE146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C15A36F-3509-4617-BF29-DE4BC55BE146}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3B57C22-B715-4BA6-B141-E971878A62C0}
+	EndGlobalSection
+EndGlobal
